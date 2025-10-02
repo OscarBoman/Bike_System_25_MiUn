@@ -32,8 +32,8 @@ class BeginnerFirstTest {
     @DisplayName("My very first test - always passes")
     void myVeryFirstTest() {
         // TODO: Write a simple test that always passes
-        // HINT: Use assertEquals(1, 1) to check if 1 equals 1
-        
+        assertEquals(1, 1);
+
         // Congratulations! You just saw your first passing test! 🎉
     }
 
@@ -47,13 +47,13 @@ class BeginnerFirstTest {
         // TODO: Follow the Arrange-Act-Assert pattern
         // ARRANGE: Set up what you need for the test
         String expectedMessage = "Hello, Testing!";
-        
+
         // ACT: Do the thing you want to test
         // TODO: Create actualMessage variable with the same value
-        
+
         // ASSERT: Check if it worked correctly
         // TODO: Use assertEquals to compare expectedMessage and actualMessage
-        
+
         // That's the basic pattern: Arrange, Act, Assert!
     }
 
@@ -65,11 +65,11 @@ class BeginnerFirstTest {
     void testBikeTypesSimple() {
         // TODO: Test BikeType.STANDARD
         // ARRANGE: Get a bike type using BikeType.STANDARD
-        
+
         // ACT: Get its display name using getDisplayName()
-        
+
         // ASSERT: Check if it equals "Standard Bike"
-        
+
         // Try this: Change "Standard Bike" to something else and see the test fail!
     }
 
@@ -80,13 +80,13 @@ class BeginnerFirstTest {
     @DisplayName("Learn different assertions")
     void learnDifferentAssertions() {
         BikeType electricBike = BikeType.ELECTRIC;
-        
+
         // TODO: Try different assertion methods:
         // - assertEquals: Check if two things are equal
         // - assertTrue: Check if something is true
         // - assertNotNull: Check if something is not null
         // - assertSame: Check if two objects are the same
-        
+
         // HINT: electricBike.getDisplayName() should be "Electric Bike"
         // HINT: electricBike.getPricePerMinute() should be > 0
     }
@@ -100,10 +100,10 @@ class BeginnerFirstTest {
     void exampleFailingTest() {
         // TODO: Write a test that passes first
         // Then uncomment a line that will fail to see what happens
-        
+
         // For now, let's make it pass:
         // assertEquals("This will pass", "This will pass");
-        
+
         // Exercise: Try making a test that fails on purpose
         // and read the error message to understand what went wrong
     }
@@ -115,15 +115,17 @@ class BeginnerFirstTest {
     @DisplayName("Practice with different bike types")
     void practiceWithDifferentBikeTypes() {
         // TODO: Test different bike types:
-        
+
         // Test standard bike
-        // HINT: BikeType.STANDARD should have display name "Standard Bike" and price 0.50
-        
-        // Test electric bike  
-        // HINT: BikeType.ELECTRIC should have display name "Electric Bike" and price 1.00
-        
+        // HINT: BikeType.STANDARD should have display name "Standard Bike" and price
+        // 0.50
+
+        // Test electric bike
+        // HINT: BikeType.ELECTRIC should have display name "Electric Bike" and price
+        // 1.00
+
         // TODO: Can you figure out the mountain and cargo bike values?
-        
+
     }
 
     /**
@@ -133,14 +135,14 @@ class BeginnerFirstTest {
     @DisplayName("Understanding expected vs actual")
     void understandExpectedVsActual() {
         BikeType mountainBike = BikeType.MOUNTAIN;
-        
+
         // In assertEquals(expected, actual):
         // - First parameter: what you EXPECT the result to be
         // - Second parameter: what the code ACTUALLY returns
-        
+
         // TODO: Create expected and actual variables
         // TODO: Use assertEquals to compare them
-        
+
         // When this fails, JUnit shows: "Expected: X, Actual: Y"
     }
 
@@ -156,6 +158,9 @@ class BeginnerFirstTest {
         // 3. Check that its rate is 1.20 (Swedish pricing)
         
         // TODO: Complete this challenge!
+        BikeType cargoBike = BikeType.CARGO;
+assertEquals("Cargo Bike", cargoBike.getDisplayName());
+ assertEquals(1.20, cargoBike.getPricePerMinute());
         
         // 🎉 Congratulations! You completed your first challenge!
         // Try changing the values above to see what happens when tests fail
