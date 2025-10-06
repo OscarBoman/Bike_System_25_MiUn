@@ -66,6 +66,22 @@ public class Station {
         this.chargingAvailable = false;
         this.chargingRate = 0.0;
     }
+
+    public Station(String stationId, String name,String address, int capacity,StationStatus status) {
+        this.stationId = stationId.trim();
+        this.name = name.trim();
+        this.address = address != null ? address.trim() : "";
+        this.latitude = 0;
+        this.longitude = 0;
+        this.capacity = capacity;
+        this.totalDocks = capacity;
+        
+        this.status = status;
+        this.availableBikes = new ConcurrentHashMap<>();
+        this.reservedBikeIds = ConcurrentHashMap.newKeySet();
+        this.chargingAvailable = false;
+        this.chargingRate = 0.0;
+    }
     
     // Business Logic Methods
     

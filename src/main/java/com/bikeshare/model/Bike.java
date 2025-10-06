@@ -70,6 +70,39 @@ public class Bike {
         this.lastMaintenanceDate = LocalDateTime.now();
         this.needsMaintenance = false;
     }
+
+    // Konstruktor for test
+      public Bike(double batteryLevel, BikeType type) {
+        this.bikeId = "";
+        this.batteryLevel = batteryLevel;
+        this.type = type; 
+    }
+
+    public Bike(BikeStatus status){
+        this.bikeId = "";
+        this.status = status; 
+    }
+
+     public Bike(BikeStatus status, BikeType type){
+        this.bikeId = "";
+        this.status = status; 
+        this.type = type; 
+        this.batteryLevel = type == BikeType.ELECTRIC ? 100.0 : -1.0;
+    }
+
+     public Bike(BikeStatus status, BikeType type, double batteryLevel){
+        this.bikeId = "";
+        this.status = status; 
+        this.type = type; 
+        this.batteryLevel = batteryLevel; 
+    }
+
+     public Bike(BikeStatus status, BikeType type, String id){
+        this.bikeId = id;
+        this.status = status; 
+        this.type = type; 
+        this.batteryLevel = type == BikeType.ELECTRIC ? 100.0 : -1.0;
+    }
     
     // Business Logic Methods - Great for testing state transitions
     
